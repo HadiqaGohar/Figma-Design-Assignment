@@ -14,7 +14,7 @@ function Navbar() {
     const [userMenuOpen, setUserMenuOpen] = useState(false);
 
     // Function to close the menu when clicking outside
-    const handleClickOutside = (e: React.MouseEvent) => {
+    const handleClickOutside = (e: MouseEvent) => {
         const target = e.target as Element;
 
         // Close menu if clicked outside of the menu
@@ -30,8 +30,10 @@ function Navbar() {
 
     // Adding an event listener for clicks outside the menu
     useEffect(() => {
-        document.addEventListener('click', handleClickOutside);
-        return () => document.removeEventListener('click', handleClickOutside);
+        if (typeof window !== 'undefined') {
+            document.addEventListener('click', handleClickOutside);
+            return () => document.removeEventListener('click', handleClickOutside);
+        }
     }, [menuOpen, userMenuOpen]);
 
     return (
@@ -140,17 +142,17 @@ function Navbar() {
 
                 {/* Icons */}
                 <div className="flex gap-4 text-gray-800 text-xl">
-                    <Link href='wishlist'>
+                    <Link href="/wishlist">
                         <IoMdHeartEmpty size={25} />
                     </Link>
-                    <Link href='/cart'>
+                    <Link href="/cart">
                         <IoCartOutline size={25} />
                     </Link>
-                    <div 
-                        className='bg-[#DB4444] h-[27px] w-[27px] p-0.5 rounded-full cursor-pointer user-menu-button'
+                    <div
+                        className="bg-[#DB4444] h-[27px] w-[27px] p-0.5 rounded-full cursor-pointer user-menu-button"
                         onClick={() => setUserMenuOpen(!userMenuOpen)}
                     >
-                        <LuUser size={23} color='white' />
+                        <LuUser size={23} color="white" />
                     </div>
                     {/* User Menu */}
                     {userMenuOpen && (
