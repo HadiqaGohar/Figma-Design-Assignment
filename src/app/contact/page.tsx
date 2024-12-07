@@ -42,7 +42,7 @@ function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className=" p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
                 <form action="" className="space-y-6">
                     {/* Name and Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -61,7 +61,7 @@ function Contact() {
                     {/* Message */}
                     <textarea
                         placeholder="Your Message*"
-                        rows="4"
+                        rows={4} // Corrected to use numeric value
                         className="w-full bg-gray-100 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
                     ></textarea>
 
