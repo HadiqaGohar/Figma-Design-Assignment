@@ -6,6 +6,8 @@ import { IoMdHeartEmpty } from 'react-icons/io';
 import { IoEyeOutline } from 'react-icons/io5';
 import Sale from '../sale/page';
 import Image from 'next/image';
+import { RiDeleteBin6Line } from 'react-icons/ri';
+import Product from '../product/page';
 
 const SaleItemCard = ({ item } : any) => (
     <div
@@ -96,6 +98,8 @@ function Wishlist() {
             itemCount: 67,
             href: '/sale/5'
         },
+        
+        
     ];
 
 
@@ -128,11 +132,10 @@ function Wishlist() {
                             <div className="absolute top-2 right-2 flex flex-col items-center space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 {/* Top-right 30px divs in column layout with icons */}
                                 <div className="bg-white h-[25px] w-[25px] p-1 rounded-full flex items-center justify-center">
-                                    <IoMdHeartEmpty />
-                                </div>
-                                <div className="bg-white h-[25px] w-[25px] p-1 rounded-full flex items-center justify-center">
-                                    <IoEyeOutline />
-                                </div>
+                                    {/* <IoMdHeartEmpty /> */}
+
+                                    <RiDeleteBin6Line />                                </div>
+                               
                             </div>
                             <div className="mb-36 mr-40 absolute text-xs h-[25px] p-1 w-[45px] rounded text-white font-normal bg-red-500">
                                 -20%
@@ -187,7 +190,8 @@ function Wishlist() {
                 <div className='text-sm font-semibold text-[#DB4444]  font-sans  mt-16'>This Month</div>
             </div>
 
-            <Sale />
+            {/* <Wishlist/> */}
+            <Product/>
         </div>
     );
 }

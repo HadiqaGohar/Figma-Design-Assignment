@@ -6,58 +6,58 @@ import { IoMdHeartEmpty } from 'react-icons/io';
 import { IoEyeOutline } from 'react-icons/io5';
 import Image from 'next/image';
 
-function Product() {
+function ExploreOurProduct2() {
   // Sale items data with unique IDs
   const saleItems = [
     {
       id: 1,
-      image: '/shirt.jpeg',
+      image: '/car.jpeg',
       title: 'HAVIT HV_G92 Gamepad',
       salePrice: '$120',
       price: '$160',
       rating: 4, // Number of filled stars
       itemCount: 67,
-      href : '/product/1'
+      href : '/exploreourproduct2/1'
     },
     {
       id: 2,
-      image: '/bag.jpeg',
-      title: 'HAVIT HV_G92 Gamepad',
-      salePrice: '$120',
-      price: '$160',
-      rating: 4,
-      itemCount: 67,
-      href : '/product/2'
-    },
-    {
-      id: 3,
       image: '/shoes.jpeg',
       title: 'HAVIT HV_G92 Gamepad',
       salePrice: '$120',
       price: '$160',
       rating: 4,
       itemCount: 67,
-      href : '/product/3'
+      href : '/exploreourproduct2/2'
     },
     {
-      id: 4,
-      image: '/sidetable.jpeg',
+      id: 3,
+      image: '/led.jpeg',
       title: 'HAVIT HV_G92 Gamepad',
       salePrice: '$120',
       price: '$160',
       rating: 4,
       itemCount: 67,
-      href : '/product/4'
+      href : '/exploreourproduct2/3'
     },
     {
-      id: 5,
+      id: 4,
       image: '/blackgame.jpeg',
       title: 'HAVIT HV_G92 Gamepad',
       salePrice: '$120',
       price: '$160',
       rating: 4,
       itemCount: 67,
-      href : '/product/5'
+      href : '/exploreourproduct2/4'
+    },
+    {
+      id: 5,
+      image: '/jacket.jpeg',
+      title: 'HAVIT HV_G92 Gamepad',
+      salePrice: '$120',
+      price: '$160',
+      rating: 4,
+      itemCount: 67,
+      href : '/exploreourproduct2/5'
     },
   ];
 
@@ -133,4 +133,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default ExploreOurProduct2;

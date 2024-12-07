@@ -9,6 +9,11 @@ import CatogoryImageList from './components/CatogoryImageList';
 import BigPicture from './components/BigPicture';
 import Arrival from './components/Arrival';
 import Round from './components/Round';
+import Product from './product/page';
+import ExplorOurProduct1 from './exploreourproduct1/page';
+import ExploreOurProduct1IdPage from './exploreourproduct1/[id]/page';
+import ExplorOurProduct2IdPage from './exploreourproduct2/[id]/page';
+import ExploreOurProduct2 from './exploreourproduct2/page';
 
 
 function Home() {
@@ -44,9 +49,9 @@ function Home() {
         </div>
 
         {/* Arrow */}
-       <div className='mr-12'>
-       <Arrow />
-       </div>
+        <div className='mr-12'>
+          <Arrow />
+        </div>
       </div>
 
 
@@ -99,7 +104,12 @@ function Home() {
 
       </div>
       <div className='mx-10 md:mx-24 '>
-        <Sale />
+        {/* <Sale /> */}
+
+        <Product />
+
+
+
       </div>
 
 
@@ -129,8 +139,17 @@ function Home() {
 
       <div className='mx-10 md:mx-24 '>
         {/* Sales */}
-        <Sale />
-        <Sale />
+
+
+
+        {/* <Sale />
+        <Sale /> */}
+        <ExplorOurProduct1/>
+        <ExploreOurProduct2/>
+        
+
+
+
         {/* Centered Button */}
         <div className="flex justify-center mt-8 ">
           <button className="px-14 py-3 text-white rounded bg-[#DB4444] hover:bg-red-700">
@@ -154,10 +173,10 @@ function Home() {
 
 
 
-     {/* ROUNDED DIV */}
-     <div className='mt-64 mb-10 xl:my-16'>
-     <Round/>
-     </div>
+      {/* ROUNDED DIV */}
+      <div className='mt-64 mb-10 xl:my-16'>
+        <Round />
+      </div>
 
 
 
