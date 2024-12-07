@@ -15,10 +15,15 @@ function Navbar() {
 
     // Function to close the menu when clicking outside
     const handleClickOutside = (e: React.MouseEvent) => {
-        if (menuOpen && !e.target.closest('.menu')) {
+        const target = e.target as Element;
+
+        // Close menu if clicked outside of the menu
+        if (menuOpen && !target.closest('.menu') && !target.closest('.lg:hidden')) {
             setMenuOpen(false);
         }
-        if (userMenuOpen && !e.target.closest('.user-menu')) {
+
+        // Close user menu if clicked outside of the user menu
+        if (userMenuOpen && !target.closest('.user-menu') && !target.closest('.user-menu-button')) {
             setUserMenuOpen(false);
         }
     };
@@ -136,18 +141,20 @@ function Navbar() {
                 {/* Icons */}
                 <div className="flex gap-4 text-gray-800 text-xl">
                     <Link href='wishlist'>
-                    
-                    <IoMdHeartEmpty size={25} /></Link>
-                    <Link href='/cart'><IoCartOutline size={25} /></Link>
+                        <IoMdHeartEmpty size={25} />
+                    </Link>
+                    <Link href='/cart'>
+                        <IoCartOutline size={25} />
+                    </Link>
                     <div 
-                        className='bg-[#DB4444] h-[27px] w-[27px] p-0.5 rounded-full cursor-pointer'
+                        className='bg-[#DB4444] h-[27px] w-[27px] p-0.5 rounded-full cursor-pointer user-menu-button'
                         onClick={() => setUserMenuOpen(!userMenuOpen)}
                     >
                         <LuUser size={23} color='white' />
                     </div>
                     {/* User Menu */}
                     {userMenuOpen && (
-                        <div className="z-10 absolute mt-14 ml-24 md:ml-0 md:top-32 md:right-8 lg:right-10 right-40 text-xs text-white  bg-[#6a646b] shadow-lg rounded-md w-48 p-2 user-menu">
+                        <div className="z-10 absolute mt-14 ml-24 md:ml-0 md:top-32 md:right-8 lg:right-10 right-40 text-xs text-white bg-[#6a646b] shadow-lg rounded-md w-48 p-2 user-menu">
                             <ul className="text-white text-left">
                                 <li className="py-2 hover:bg-gray-200 hover:text-black px-2">
                                     <Link href="/account">Manage My Account</Link>
