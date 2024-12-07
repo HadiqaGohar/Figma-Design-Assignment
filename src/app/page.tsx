@@ -31,7 +31,7 @@ function Home() {
         </div>
 
         {/* Image Carousel with Radio Buttons */}
-        <div className='flex-1 lg:w-1/2 ml-5'>
+        <div className='flex-1 lg:w-1/2 mx-auto'>
           <PosterImage />
         </div>
       </div>
@@ -44,18 +44,18 @@ function Home() {
 
       <div className='flex flex-col md:flex-row justify-between '>
         <h2 className='text-2xl lg:text-3xl xl:text-4xl font-semibold ml-10 md:ml-24 mt-6'>Flash Sales</h2>
-        <div className='ml-10 lg:ml-0 xl:mr-[350px] mt-3'>
+        <div className=' mx-auto  lg:ml-0 xl:mr-[350px] mt-3'>
           <Clock />
         </div>
 
         {/* Arrow */}
-        <div className='mr-12'>
+        <div className='md:mr-12'>
           <Arrow />
         </div>
       </div>
 
 
-      <div className='mx-10 md:mx-24 '>
+      <div className=' md:mx-24 '>
         {/* Sales */}
         <Sale />
         {/* Centered Button */}
@@ -103,7 +103,7 @@ function Home() {
         </div>
 
       </div>
-      <div className='mx-10 md:mx-24 '>
+      <div className='mx-auto md:mx-24 '>
         {/* <Sale /> */}
 
         <Product />
@@ -137,7 +137,7 @@ function Home() {
       </div>
 
 
-      <div className='mx-10 md:mx-24 '>
+      <div className='mx-auto md:mx-24 '>
         {/* Sales */}
 
 
@@ -167,7 +167,7 @@ function Home() {
       <div className='flex flex-col md:flex-row justify-between '>
         <h2 className='text-2xl lg:text-3xl xl:text-4xl font-semibold ml-10 md:ml-24 mt-6'>New Arrival</h2>
       </div>
-      <div className=' mx-10 md:mx-24 mt-8 '>
+      <div className=' mx-auto md:mx-24 mt-8 '>
         <Arrival />
       </div>
 
